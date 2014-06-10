@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="css/jquery.mobile.min.css" rel="stylesheet"type+"text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+<head>
+<body>
+<script>
+$( document ).bind("pageinit",function() {
+  $('#hantar').click (function() {
+		var nama = $('#nama').val();
+		var v1 = $('#v1').val();
+		var v2 = $('#v2').val();
+		var v3 = parseInt(v1) + parseInt (v2);
+		var data = "Hi" +" " + nama + " " + "</br>" + "Jumlah" + " " + v3;
+		$('#data').html(data);
+		//$ ('#try_ajax').show();
+			$('#try_ajax').popup('open');
+			
+		});
+	  });
+	
+</script>
+
+<div data-role="page" id"page">
+
+	<!--content-->
+	<div role="main" class="ui-content">
+		<form id="form1">
+		<div data-role="fieldcontain">
+			<label>Nama</label>
+			<input type="text" name="nama" id="nama"/></br>
+	</div>
+	<div data-role="fieldcontain">
+			<label>Nombor 1</label>
+			<input type="number" name="v1" id="v1"/></br>
+	</div>
+	<div data-role="fieldcontain">
+			<label>Nombor 2</label>
+			<input type="number" name="v2" id="v2"/></br>
+	</div>
+	</form>
+	
+	<input type="button" id="hantar" value="Kira">
+	<div id="try_ajax" data-role="popup" id="popupCloseRight" data-dismissible="false" style="max-width:300px; min-width:300px">
+		<div data-role="header">
+		<h3>Jumlah</h3>
+		</div>
+			<div role="main" class="ui-content">
+			<div id="data" style="text-align:center">
+			</div>
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" >OK</a>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow"  data-rel="back">TUTUP</a>
+		
+		</div>
+	</div>
+</div>
+</body>
+</html>

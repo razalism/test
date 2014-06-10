@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<head>
+<body>
+<script>
+$(document).ready(function() {
+  // Pengiraan menggunakan ajax
+  $('#hantar').click (function() {
+		$.ajax({
+		type: 'POST',
+		url: 'form.php',
+		data: $("#form1").serialize(),
+		success: function(data){
+			$('#try_ajax').html(data);
+			$('#try_ajax').show();
+			}
+		});
+	  });
+	});
+</script>
+<form id="form1">
+    Nama : <input type="text" name="nama" /> <br />
+	variable 1: <input type="number" name="v1" /> <br />
+	variable 1: <input type="number" name="v2" /> <br />
+		
+</form>
+<input type="button" id="hantar" value="Kira">
+<div id="try_ajax" style="display : none;">
+	HASIL DISINI
+</div>
+</body>
+</html>

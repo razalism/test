@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="css/jquery.mobile.min.css" rel="stylesheet"type+"text/css">
+<link href="css/ntah.css" rel="stylesheet"type+"text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+<head>
+<body>
+<script>
+$( document ).bind("pageinit",function() {
+	//Pengiraan Menggunakan Ajax
+  $('#hantar').click (function() {
+		$.ajax({
+				type: 'POST',
+				url: 'form4.php',
+				data: $("#form1").serialize(),
+				success: function(data){
+				$('#data').html(data);
+				$('#try_ajax').popup('open');
+				}
+			});
+		});
+ });
+	
+</script>
+
+<div data-role="page" id"page">
+
+	<!--content-->
+	<div role="main" class="ui-content">
+		<form id="form1">
+		<div data-role="fieldcontain">
+			<label>Nama</label>
+			<input type="text" name="nama" id="nama"/></br>
+	</div>
+	<div data-role="fieldcontain">
+			<label>T.Lahir</label>
+			<input type="date" data-role="date" name="lahir" id="lahir">
+	</div>
+	<div data-role="fieldcontain">
+			<label>Jantina</label>
+			<fieldset data-role="controlgroup" data-type="horizontal">
+			<input type="radio" name="jantina" id="radio-choice-h-2a" value="Lelaki" checked="checked">
+			<label for="radio-choice-h-2a">Lelaki</label>
+			<input type="radio" name="jantina" id="radio-choice-h-2b" value="Perempuan">
+			<label for="radio-choice-h-2b">Perempuan</label>
+			</fieldset>
+	</div>
+	<div data-role="fieldcontain">
+			<label>Keturunan</label>
+			<fieldset data-role="controlgroup" data-iconpos="right">
+            <input type="checkbox" name="melayu" id="melayu">
+			<label for="melayu">Melayu</label>
+			<input type="checkbox" name="cina" id="cina">
+			<label for="cina">Cina</label>
+			<input type="checkbox" name="india" id="india">
+			<label for="india">India</label>
+    </fieldset>
+	</div>
+	<div data-role="fieldcontain">
+			<label for="select-native-1">Pekerjaan</label>
+			<select name="pekerjaan" id="pekerjaan">
+			<option value="Berniaga">Berniaga</option>
+			<option value="Kakitangan Sektor Awam">Kakitangan Sektor Awam</option>
+			<option value="Kakitangan Sektor Swasta">Kakitangan Sektor Swasta</option>
+			<option value="Tentera/Polis">Tentera/Polis</option>
+			<option value="Tidak Bekerja">Tidak Bekerja</option>
+    </select>
+    </div>
+	<div data-role="fieldcontain">
+			<label for="textarea-1">Komen:</label>
+    <textarea cols="40" rows="8" name="textarea-1" id="textarea-1"></textarea>
+    </div>
+	</form>
+	
+	<input type="button" id="hantar" value="Hantar">
+	<div id="try_ajax" data-role="popup" id="popupCloseRight" data-dismissible="false" style="max-width:300px; min-width:300px">
+		<div data-role="header">
+		<h3>Hasil</h3>
+		</div>
+			<div role="main" class="ui-content">
+			<div id="data" style="text-align:center">
+			</div>
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" >OK</a>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow"  data-rel="back">TUTUP</a>
+		
+		</div>
+	</div>
+</div>
+</body>
+</html>
