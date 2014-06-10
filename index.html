@@ -1,1 +1,216 @@
-<html><body><h1>It works!</h1></body></html>
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="css/jquery.mobile.min.css" rel="stylesheet"type+"text/css">
+<link href="css/ntah.css" rel="stylesheet"type+"text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+</head>
+<body>
+<!--Step 1 aka Page 1-->
+<div data-role="page" id="page1">
+	<!--content-->
+	<div role="main" class="ui-content" style="text-align:center">
+		<h1> Welcome To FX Signal </h1>
+		<img src="image/fxsig.jpg" style="width :200px;height:100px;"/>
+		<h3> FX Web Mobile Signal </h3>
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-inset="false">
+			<h3> Daftar Langganan </h3>
+			<ul data-role="listview">
+				<li><a href="#page2">Maklumat Peribadi & Akaun</a></li>
+				<li><a href="#page3">Maklumat Perniagaan</a></li>
+			</ul>
+			</div>
+	</div>
+	<div data-role="collapsible-set">
+			<div data-role="collapsible" data-inset="false">
+			<h3> CCY Trading Info</h3>
+			<ul data-role="listview">
+				<li><a href="#page4">Euro Vs Usd</a></li>
+				<li><a href="#page5">Gbp Vs Usd</a></li>
+				<li><a href="#page6">Nzd Vs Usd</a></li>
+				<li><a href="#page7">Aud Vs Usd</a></li>
+								
+			</ul>
+			</div>
+	</div>
+	<div data-role="collapsible-set">
+			<div data-role="collapsible" data-inset="false">
+			<h3> Contact Us </h3>
+			<ul data-role="listview">
+			<li><a href="#page9">Borang Maklumbalas</a></li>
+			</div>
+		<div data-role="footer" data-position="fixed">
+		<h4> Hak Cipta Sungai Palung S/B | Official Fx Mobile Signal </h4>
+		</div>
+	</div>
+	</div>
+</div>
+<!--Page2-->
+<div data-role="page" id="page2">
+<!--header-->
+<div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+	<h3>Daftar Langganan</h3>
+</div>
+<!--content-->
+	<div role="main" class="ui-content">
+		<h2> Maklumat Peribadi </h2>
+		Sila Masukkan Data Peribadi anda seperti Nama Penuh, No Kad Pengenalan , Alamat Email, Alamat Rumah, No telefon dan lain-lain.
+		
+		<h2> Maklumat Akaun </h2>
+		Sila Masukkan Maklumat Trading Akaun anda seperti Nama Broker, Platform Trading , leverage, Modal Pusingan dan lain-lain.
+	</div>
+		<a href="#popup1" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Contoh</a>
+			<div data-role="popup" id="popup1" data-dismissble="false">
+			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" >OK</a>
+			<p>Nama: Ali Bin Abu</p>
+			<p>Alamat : Bukit Tunku Rumah Panjang</p>
+			<p>No.KP : 1234567890</p>			
+			</div>		
+	<!--Footer-->
+<div data-role="footer" data-position ="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page2" data-icon="star" class="ui-btn-active ui-state-presist">Daftar Langganan</a></li>
+				<li><a href="#page1" data-icon="grid">Home</a></li>
+				<li><a href="#page9" data-icon="gear">Contact Us</a></li>
+			</ul>
+		</div><!--/navbar-->
+	</div>	
+</div>
+<!--Page3-->
+<div data-role="page" id="page3">
+<!--header-->
+<div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+	<h3>Daftar Langganan</h3>
+</div>
+<!--content-->
+	<div role="main" class="ui-content">
+		<h2> Maklumat Perniagaan </h2>
+		Sila Masukkan Data Syarikat anda seperti Nama Syarikat, No Daftar Syarikat , Alamat Email, Alamat Syarikat, No telefon dan lain-lain.
+		
+		<h2> Maklumat Akaun </h2>
+		Sila Masukkan Maklumat Trading Akaun anda seperti Nama Broker, Platform Trading , leverage, Modal Pusingan dan lain-lain.
+	</div>
+			<a href="#popup2" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Contoh</a>
+			<div data-role="popup" id="popup2" data-dismissble="false">
+			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right" >OK</a>
+			<p>Nama: Perniagaan ABC Bukit Jurong</p>
+			<p>Alamat : No3, Puncak Jurong, Jalan 9/10A</p>
+			<p>No.Daftar : SYK 4567890</p>			
+			</div>		
+			
+	<!--Footer-->
+<div data-role="footer" data-position ="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page3" data-icon="star" class="ui-btn-active ui-state-presist">Daftar Perniagaan</a></li>
+				<li><a href="#page1" data-icon="grid">Home</a></li>
+				<li><a href="#page9" data-icon="gear">Contact Us</a></li>
+			</ul>
+		</div><!--/navbar-->
+	</div>	
+</div>
+<!--Page4-->
+<div data-role="page" id="page4">
+<!--header-->
+<div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+	<h3>EUR vs USD</h3>
+</div>
+<!--content-->
+	<div role="main" class="ui-content">
+		<h2> Maklumat Eur vs USD </h2>
+		<img src="image/EU.jpg" style="width :200px;height:100px;"/>
+		EUR/USD adalah padanan yang paling biasa diniagakan dalam pasaran Forex. Popularitinya boleh menyumbang kepada hakikat bahawa setiap mata wang mewakili dua blok terbesar di dunia ekonomi dan perdagangan, serta banyak syarikat-syarikat multinasional yang menjalankan perniagaan di Amerika Syarikat dan Eropah.
+        Pergerakan harga padanan mata wang ini umumnya berkaitan dengan faktor-faktor yang mempengaruhi nilai sama ada EUR atau USD. Oleh kerana kebanyakan padanan mata wang dunia, EUR/USD menawarkan spread yang ketat dan mudah tunai yang berterusan untuk peniaga-peniaga yang mencari untuk segera membeli atau menjual. Gabungan kestabilan dan turun naik menjadikan EUR/USD padanan yang sangat baik untuk peniaga yang baru dan lama.
+		Fakta:
+		EUR/USD padanan mata wang yang paling diniagakan di dunia, dengan jumlah dagangan tertinggi.
+		Euro adalah mata wang kedua yang paling popular di dunia, selepas dolar.
+		Terdapat lebih 17 buah negara yang mengambil kira euro mata wang rasmi mereka dan kira-kira 4 yang menggunakan euro secara tidak rasmi. Negara-negara ini secara kolektif dikenali sebagai "Zon" atau "Eropah dan Ekonomi Kesatuan Kewangan (EMU)".
+		Kelebihan:
+		EUR/USD peniaga menawarkan kelancaran yang tinggi dan mempunyai spread yang sangat ketat dan berdaya saing.
+		EUR/USD mempunyai hubungan sejarah dengan GBP/USD.
+		Kekuatan relatif ekonomi AS dan ekonomi Eropah, yang boleh dikesan melalui berita harian, umumnya mempengaruhi padanan ini.
+		Masukkan maklumat anda dalam borang di atas dan mula mengambil kelebihan daripada manfaat Forex dengan sesi latihan yang unik secara individu..
+	</div>
+			
+	<!--Footer-->
+<div data-role="footer" data-position ="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page4" data-icon="star" class="ui-btn-active ui-state-presist">EURUSD</a></li>
+				<li><a href="#page1" data-icon="grid">Home</a></li>
+				<li><a href="#page3" data-icon="star">Daftar Perniagaan</a></li>
+				<li><a href="#page9" data-icon="gear">Contact Us</a></li>
+			</ul>
+		</div><!--/navbar-->
+	</div>	
+</div>
+<!--Page9-->
+<div data-role="page" id="page9">
+<!--header-->
+<div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+	<h3>Borang Maklumbalas</h3>
+</div>
+<!--content-->
+	<!--content-->
+	<div role="main" class="ui-content">
+		<form id="form1">
+		<div data-role="fieldcontain">
+			<label>Nama</label>
+			<input type="text" name="nama" id="nama"/></br>
+	</div>
+	<div data-role="fieldcontain">
+			<label>T.Lahir</label>
+			<input type="date" data-role="date" name="lahir" id="lahir">
+	</div>
+	<div data-role="fieldcontain">
+			<label>Jantina</label>
+			<fieldset data-role="controlgroup" data-type="horizontal">
+			<input type="radio" name="jantina" id="radio-choice-h-2a" value="Lelaki" checked="checked">
+			<label for="radio-choice-h-2a">Lelaki</label>
+			<input type="radio" name="jantina" id="radio-choice-h-2b" value="Perempuan">
+			<label for="radio-choice-h-2b">Perempuan</label>
+			</fieldset>
+	</div>
+	<div data-role="fieldcontain">
+			<label>Keturunan</label>
+			<fieldset data-role="controlgroup" data-iconpos="right">
+            <input type="checkbox" name="melayu" id="melayu">
+			<label for="melayu">Melayu</label>
+			<input type="checkbox" name="cina" id="cina">
+			<label for="cina">Cina</label>
+			<input type="checkbox" name="india" id="india">
+			<label for="india">India</label>
+    </fieldset>
+	</div>
+	<div data-role="fieldcontain">
+			<label for="select-native-1">Pekerjaan</label>
+			<select name="pekerjaan" id="pekerjaan">
+			<option value="Berniaga">Berniaga</option>
+			<option value="Kakitangan Sektor Awam">Kakitangan Sektor Awam</option>
+			<option value="Kakitangan Sektor Swasta">Kakitangan Sektor Swasta</option>
+			<option value="Tentera/Polis">Tentera/Polis</option>
+			<option value="Tidak Bekerja">Tidak Bekerja</option>
+    </select>
+    </div>
+	<div data-role="fieldcontain">
+			<label for="textarea-1">Komen:</label>
+    <textarea cols="40" rows="8" name="textarea-1" id="textarea-1"></textarea>
+    </div>
+	</form>
+			
+	<!--Footer-->
+<div data-role="footer" data-position ="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page1" data-icon="grid">Home</a></li>
+				<li><a href="#page9" data-icon="gear">Contact Us</a></li>
+			</ul>
+		</div><!--/navbar-->
+	</div>	
+</div>
+
+</html>
